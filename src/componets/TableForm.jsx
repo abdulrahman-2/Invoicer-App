@@ -2,6 +2,10 @@ import React from "react";
 import { StateContext } from "../context/StateContext";
 import { v4 as uuidv4 } from "uuid";
 
+// icons
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
+
 export const TableForm = () => {
   const {
     item,
@@ -169,19 +173,15 @@ export const TableForm = () => {
                 <td>{item.quantity}</td>
                 <td>{item.price}</td>
                 <td>{item.amount}</td>
-                <td>
-                  <button
-                    className="bg-red-400 text-white font-bold text-sm w-14 rounded shadow mt-2 md:text-base md:mr-2 md:w-16 cursor-pointer "
+                <td className="flex justify-center items-center gap-3 md:gap-5 mt-2">
+                  <DeleteOutlineOutlinedIcon
+                    className="text-red-500 cursor-pointer"
                     onClick={() => deleteRow(item.id)}
-                  >
-                    Delete
-                  </button>
-                  <button
-                    className="bg-blue-500 text-white font-bold text-sm w-14 rounded shadow md:text-base md:w-16 cursor-pointer "
+                  />
+                  <BorderColorOutlinedIcon
+                    className="text-blue-500 cursor-pointer"
                     onClick={() => updateRow(item.id)}
-                  >
-                    Edit
-                  </button>
+                  />
                 </td>
               </tr>
             </React.Fragment>

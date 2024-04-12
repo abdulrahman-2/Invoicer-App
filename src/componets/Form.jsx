@@ -14,7 +14,7 @@ export const Form = () => {
   } = useContext(StateContext);
   return (
     <>
-      <section className="flex flex-col justify-center border border-blue-300 bg-white rounded-lg p-5 m-3 shadow-md">
+      <section className="flex flex-col justify-center border border-blue-300 bg-white rounded-lg m-3 shadow-md">
         <div className="bg-white p-5 rounded shadow">
           <div className="flex flex-col justify-center">
             <article className="md:grid grid-cols-2 gap-5">
@@ -211,9 +211,9 @@ export const Form = () => {
             ></textarea>
           </div>
         </div>
-        <div>
+        <div className="m-5">
           <button
-            className="w-full bg-blue-500 text-white font-bold rounded shadow py-2 px-8 cursor-pointer border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
+            className="w-full bg-blue-500 text-white font-bold rounded shadow py-2 px-8  cursor-pointer border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
             onClick={() => {
               setShowInvoicer(true);
             }}
